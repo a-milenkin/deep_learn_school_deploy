@@ -1,0 +1,21 @@
+import telebot
+from config import token
+from bert_utils import *
+
+bot=telebot.TeleBot(token)
+
+@bot.message_handler(commands=['start'])
+def start_message(message):
+    bot.send_message(message.chat.id,'Привет')
+
+
+@bot.message_handler(content_types='text')
+def message_reply(message):
+
+    text, score = get_toxic_score(message.text)
+
+    answer = f'{text} \nПроцент токсичности: {score}'
+
+    bot.send_message(message.chat.id, answer)
+
+bot.infinity_polling() # запускаем бота, чтоб он работал вечно
