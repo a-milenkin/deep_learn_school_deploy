@@ -22,4 +22,5 @@ python app.py
 Перед установкой следует указать `token` в файл `config.py`. Можно сделать через бота @BotFather в телеграм. 
 
 
-## Автор проект - Aleron @datafeeling
+## Автор проект 
+- Aleron @datafeeling
