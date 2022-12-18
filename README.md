@@ -22,5 +22,9 @@ python app.py
 Перед установкой следует указать `token` в файл `config.py`. Можно сделать через бота @BotFather в телеграм. 
 
 
+## Пример работы
+
+<img src="images/chatBot.JPG" width="75%" height="75%"/>
+
 ## Автор проект 
 - Aleron @datafeeling
