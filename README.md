@@ -9,7 +9,7 @@
 ```bash
 git clone https://github.com/a-milenkin/deep_learn_school_deploy.git
 cd deep_learn_school_deploy
-pip install requiremets.txt
+pip install requirements.txt
 ```
 
 Запустить бота
