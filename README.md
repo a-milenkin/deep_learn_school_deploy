@@ -1,4 +1,4 @@
-# deep_learn_school_deploy
+# Deep Learning School Deploy Project 
 
 
 Код для простого чат-бота на python, классифицирующего сообщения на токсичные и не токсичные. 
