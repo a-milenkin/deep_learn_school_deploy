@@ -1,12 +1,12 @@
 import telebot
-from config import token
+from config import token # Не забудь создать себе токен!
 from bert_utils import *
 
 bot=telebot.TeleBot(token)
 
 @bot.message_handler(commands=['start'])
 def start_message(message):
-    bot.send_message(message.chat.id,'Привет')
+    bot.send_message(message.chat.id, 'Привет')
 
 
 @bot.message_handler(content_types='text')
@@ -18,7 +18,8 @@ def message_reply(message):
 
     bot.send_message(message.chat.id, answer)
 
-    
-    
-if __name__ == '__main__':
-    bot.infinity_polling() # запускаем бота, чтоб он работал вечно
+
+
+
+# if __name__ == '__main__':
+bot.infinity_polling() # запускаем бота, чтоб он работал вечно
