@@ -18,8 +18,6 @@ def message_reply(message):
 
     bot.send_message(message.chat.id, answer)
 
-
-
-
+    
 if __name__ == '__main__':
     bot.infinity_polling() # запускаем бота, чтоб он работал вечно
