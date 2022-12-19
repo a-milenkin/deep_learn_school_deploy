@@ -39,8 +39,8 @@ def get_toxic_score(text):
     score = np.round(1 - score, 3)
     
     if score > 0.6:
-        return 'токсичное сообщение', score
+        return 'Токсичное сообщение', score
     elif 0.10 >= score >= 0.60:
-        return 'сообщение средней токсичности', score
+        return 'Сообщение средней токсичности', score
     else:
-        return 'сообщение не токсичное', score
+        return 'Сообщение не токсичное', score
