@@ -21,5 +21,5 @@ def message_reply(message):
 
 
 
-# if __name__ == '__main__':
-bot.infinity_polling() # запускаем бота, чтоб он работал вечно
+if __name__ == '__main__':
+    bot.infinity_polling() # запускаем бота, чтоб он работал вечно
