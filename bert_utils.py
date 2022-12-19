@@ -14,13 +14,13 @@ def get_toxic_score(text):
 
     batch = tokenizer.encode(text, return_tensors='pt')
     response = model(batch).logits.detach().numpy()  # Получаем прогноз модели
-    score = np.exp(response[0][0])/sum(np.exp(response[0])) # Оборачиваем в softmax
+    score = np.exp(response[0][1])/sum(np.exp(response[0])) # Оборачиваем в softmax
 
-    score = np.round(1 - score, 3)
+    score = np.round(score, 3)
 
-    if score >= 0.9:
-        return 'токсичное сообщение', score
+    if score > 0.6:
+        return 'Токсичное сообщение', score
     elif 0.10 >= score >= 0.60:
-        return 'сообщение средней токсичности', score
+        return 'Сообщение средней токсичности', score
     else:
-        return 'сообщение не токсичное', score
+        return 'Сообщение не токсичное', score
