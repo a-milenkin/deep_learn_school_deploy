@@ -11,13 +11,14 @@ def start_message(message):
 
 @bot.message_handler(content_types='text')
 def message_reply(message):
-
+    
+    print('Вижу новое сообщение!')
     text, score = get_toxic_score(message.text)
-
     answer = f'{text} \nПроцент токсичности: {score}'
 
     bot.send_message(message.chat.id, answer)
 
     
 if __name__ == '__main__':
+    print('Bot is staring...')
     bot.infinity_polling() # запускаем бота, чтоб он работал вечно
